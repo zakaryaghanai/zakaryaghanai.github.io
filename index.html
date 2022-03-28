@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>zakarya ghanai</title>
     <link rel="stylesheet" href="src/assets/css/index.css">
-    <link rel="stylesheet" href="src/assets/css/responsive.css">
+    <link rel="stylesheet" href="src/assets/css/site-media.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
     <div class="container header-content">
-        <a href="#main">
+        <a href="#bio">
             <svg class="logo" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M0 0H46.878V11.3995L46.8781 11.3996L46.878 11.3996L16.4679 37.8467H46.8783C46.8783 44.1425 41.7746 49.2463 35.4787 49.2463H0.000278013V37.8468L7.78679e-05 37.8466L30.9656 11.3996H11.3996C5.10377 11.3996 0 6.29582 0 0Z"
@@ -23,63 +23,53 @@
         </a>
         <nav>
             <ul>
-                <a href="#main" class="active">Bio</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#bio" class="bio">Bio</a>
+                <a href="#education" class="education">Education</a>
+                <a href="#skills" class="skills">Skills</a>
+                <a href="#experience" class="experience">Experience</a>
+                <a href="#projects" class="projects">Projects</a>
+                <a href="#contact" class="contact">Contact</a>
             </ul>
         </nav>
     </div>
 </header>
 <main>
-    <section>
-        <div id="main">
-            <div class="container">
-                <div class="main-heading">
-                    <div class="descreption">
-                        <div class="me">
-                            <p class="welcome">Hi, I Am</p>
-                            <p class="name">Zakarya Ghanai</p>
-                        </div>
-                        <div class="breif">
-                            <p>
-                                Specialized in creating sleek and premium interfaces with
-                                the help of React
-                            </p>
-                        </div>
+
+    <section id="bio">
+        <div class="container">
+            <div class="main-heading">
+                <div class="descreption">
+                    <div class="me">
+                        <p class="welcome">Hi, I Am</p>
+                        <p class="name">Zakarya Ghanai</p>
                     </div>
-                    <div class="image-bg">
-                        <div class="image">
-                            <img src="src/assets/images/portfolio-image.jpeg" alt="">
-                        </div>
+                    <div class="breif">
+                        <p>
+                            Specialized in creating sleek and premium interfaces with
+                            the help of React
+                        </p>
                     </div>
                 </div>
-                <div>
-                    <button class="btn rounded-smooth">Download Resume</button>
+                <div id="porfolio-image">
+                    <img src="src/assets/images/portfolio-image.jpeg" alt="">
                 </div>
             </div>
+            <div>
+                <button class="btn rounded-smooth">Download Resume</button>
+            </div>
         </div>
-        <div class="section" id="education">
-
-        </div>
-        <div class="section" id="skills">
-
-        </div>
-        <div class="section" id="experience">
-
-        </div>
-        <div class="section" id="projects">
-
-        </div>
-        <div class="section" id="contact">
-
-        </div>
-
     </section>
+    <section id="education" class="stroked-text"></section>
+    <section id="skills" class="stroked-text"></section>
+    <section id="experience" class="stroked-text"></section>
+    <section id="projects" class="stroked-text"></section>
+    <section id="contact" class="stroked-text"></section>
+
 </main>
 
+<footer>
+    footer
+</footer>
 <script src="src/assets/js/site.js"></script>
 </body>
 </html>

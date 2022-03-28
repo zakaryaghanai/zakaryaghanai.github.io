@@ -1,0 +1,86 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#bio {
+    background: transparent;
+}
+
+/* XS */
+@media (min-width: 0px) and (max-width: 639px) {
+    .container {
+        width: 90%;
+    }
+    #porfolio-image {
+        display: none !important;
+    }
+
+    .descreption .me {
+        margin: 0;
+        font-size: 4rem;
+    }
+
+    .descreption .breif {
+        font-size: 2rem;
+        width: 470px;
+    }
+
+    section.stroked-text:before {
+        font-size: 2em;
+    }
+
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    #porfolio-image {
+        display: none !important;
+    }
+
+    section.stroked-text:before {
+        font-size: 2.5em;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 90%;
+    }
+
+    #porfolio-image {
+        display: none !important;
+    }
+
+    section.stroked-text:before {
+        font-size: 3em;
+    }
+
+}
+
+/* LG */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #porfolio-image {
+        display: none !important;
+    }
+}
+
+/* XL */
+@media (min-width: 1280px) and (max-width: 1535px) {
+
+}
+
+/* 2XL */
+@media (min-width: 1536px) {
+
+}
+
+
+
+
+
+

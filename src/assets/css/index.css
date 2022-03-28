@@ -29,17 +29,17 @@ body {
 
 html, body {
     width: 100%;
-    height: 100%;
     background: #fff;
     scroll-behavior: smooth;
 }
 
 header {
-    position: fixed;
+    position: sticky;
     width: 100%;
+    height: 80px;
+    display: flex;
     background: #fff;
     top: 0;
-    padding: 15px 0;
     box-shadow: 0 0 10px 0 #eeeeee;
     z-index: 1000;
 }
@@ -79,7 +79,6 @@ header nav a:hover {
 
 main {
     width: 100%;
-    height: 100%;
     color: var(--primary-color);
     font-weight: 900;
     font-size: 3em;
@@ -105,11 +104,22 @@ main {
     overflow: hidden;
 }
 
-.main-heading .image img {
+.main-heading #porfolio-image {
+    flex: 1;
+    justify-content: end;
+    align-items: center;
     width: 100%;
-    height: 100%;
+    display: flex;
+    padding-inline-end: 50px;
+}
+.main-heading #porfolio-image img {
     border-radius: 250px;
-    background-position: center;
+    padding: 7px;
+    width: 320px;
+    height: 320px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #34838b;
 }
 
 .descreption .me {
@@ -147,29 +157,27 @@ main {
     -webkit-mask-image: paint(smooth-corners);
 }
 
-/*
-#717cc0
-    #e07a5f
-
-
-    #34838b
-*/
-
-.section {
-    position: relative;
-    height: 500px;
-    /*-webkit-text-fill-color: transparent;*/
-    -webkit-text-stroke: 1px #dcc8ff;
+section {
+    padding-bottom: 80px;
+    overflow: hidden;
 }
 
-.section:before {
+section.stroked-text {
+    position: relative;
+    height: 500px;
+}
+
+section.stroked-text:before {
     position: absolute;
     bottom: 0;
     left: 0;
     font-size: 4em;
-    /*color: var(--primary-bg);*/
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px var(--primary-color);
+}
+
+#education {
+    background: var(--primary-bg);
 }
 
 #education:before {
@@ -192,6 +200,9 @@ main {
     content: "Contact";
 }
 
+footer {
+
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
