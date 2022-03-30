@@ -1,9 +1,9 @@
 @import url('https://rsms.me/inter/inter.css');
 
 :root {
-    --primary-text-color: #0b2225;
-    --primary-color: #34838b;
-    --primary-bg: #e5eff0;
+    --primary-text-color: #243b77;
+    --primary-color: #80a4ff;
+    --primary-bg: #f0f4ff;
 }
 
 html {
@@ -15,6 +15,10 @@ html {
         font-family: 'Inter var', sans-serif;
     }
 }
+p {
+    word-break: break-word;
+}
+
 
 * {
     box-sizing: border-box;
@@ -25,6 +29,7 @@ body {
     margin: 0;
     padding: 0;
     background: #f8f9fa;
+    overflow-x: hidden;
 }
 
 html, body {
@@ -36,12 +41,13 @@ html, body {
 header {
     position: sticky;
     width: 100%;
-    height: 80px;
+    height: 90px;
     display: flex;
-    background: #fff;
+    background: #ffffffc2;
     top: 0;
     box-shadow: 0 0 10px 0 #eeeeee;
     z-index: 1000;
+    backdrop-filter: blur(20px);
 }
 
 .header-content {
@@ -62,6 +68,10 @@ header nav a {
     transition: 200ms
 }
 
+nav .toggle {
+    display: none;
+}
+
 header nav a:hover {
     color: var(--primary-color);
 }
@@ -71,9 +81,14 @@ header nav a:hover {
     font-weight: 700;
 }
 
-.header-content svg {
-    width: 33px;
-    height: 33px;
+.header-content .logo svg {
+    width: 150px;
+    height: 45px;
+}
+
+.header-content .toggle svg {
+    width: 30px;
+    height: 60px;
 }
 
 
@@ -96,7 +111,6 @@ main {
 }
 
 .main-heading .image-bg {
-    background: linear-gradient(0, var(--primary-color), #6dffd2);
     border-radius: 250px;
     padding: 20px;
     width: 300px;
@@ -105,6 +119,7 @@ main {
 }
 
 .main-heading #porfolio-image {
+    position: relative;
     flex: 1;
     justify-content: end;
     align-items: center;
@@ -112,14 +127,17 @@ main {
     display: flex;
     padding-inline-end: 50px;
 }
+
+.main-heading #porfolio-image svg {
+    position: absolute;
+    right: -5px;
+    width: 430px;
+}
+
 .main-heading #porfolio-image img {
+    position: relative;
     border-radius: 250px;
-    padding: 7px;
-    width: 320px;
-    height: 320px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #34838b;
+    width: 330px;
 }
 
 .descreption .me {
@@ -127,6 +145,7 @@ main {
     font-size: 4.5rem;
     width: 600px;
     background: var(--primary-color);
+    background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -140,25 +159,32 @@ main {
 }
 
 .btn {
-    background: var(--primary-bg);
-    color: var(--primary-color);
+    background: linear-gradient(180deg, var(--primary-color), #6288eb);
+    color: #fff;
     border: 0;
     height: 65px;
+    width: 200px;
     font-size: 1rem;
     font-weight: 600;
-    padding: 10px 45px;
+    padding: 10px;
     cursor: pointer;
 }
 
 .rounded-smooth {
     border-radius: 15px;
-    --smooth-corners: 16.4, 2.2;
-    mask-image: paint(smooth-corners);
-    -webkit-mask-image: paint(smooth-corners);
 }
 
+@supports (-webkit-mask-image: paint(smooth-corners)){
+    .rounded-smooth {
+        border-radius: 15px;
+        --smooth-corners: 16.4, 2.2;
+        mask-image: paint(smooth-corners);
+        -webkit-mask-image: paint(smooth-corners);
+    }
+}
+
+
 section {
-    padding-bottom: 80px;
     overflow: hidden;
 }
 
@@ -169,11 +195,15 @@ section.stroked-text {
 
 section.stroked-text:before {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 4em;
+    top: 0;
+    left: 10px;
+    font-size: 2.5em;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px var(--primary-color);
+}
+
+#bio {
+    padding-bottom: 100px;
 }
 
 #education {
@@ -201,10 +231,12 @@ section.stroked-text:before {
 }
 
 footer {
-
+    height: 500px;
+    background: var(--primary-color);
 }
 ::-webkit-scrollbar {
     width: 10px;
+    background: #e6eaf5;
 }
 
 ::-webkit-scrollbar-thumb {
