@@ -290,18 +290,23 @@ section.stroked-text:before {
 }
 #projects .project-card .tags {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
-#projects .project-card .tags .tag {
-    font-size: 15px;
-    color: #fff;
-    background: var(--primary-color);
-    padding: 5px 10px;
-    border-radius: 40px;
-    font-weight: 400;
+#projects .project-card .tags img {
+    width: max-content;
+    height: 40px;
 }
+
+/*#projects .project-card .tags .tag {*/
+/*    font-size: 15px;*/
+/*    color: #fff;*/
+/*    background: var(--primary-color);*/
+/*    padding: 5px 10px;*/
+/*    border-radius: 40px;*/
+/*    font-weight: 400;*/
+/*}*/
 
 #projects .project-card img {
     width: 100%;
