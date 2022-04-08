@@ -1,20 +1,18 @@
 @import url('https://rsms.me/inter/inter.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap');
 :root {
-    --primary-text-color: #243b77;
-    --primary-color: #80a4ff;
-    --primary-bg: #f0f4ff;
+    --primary-text-color: #021316;
+    --secondary-text-color: #6c6c6c;
+    --primary-color: #55c3da;
+    --primary-bg: #fff;
+    --body-bg: #fff;
 }
 
 html {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400 !important;
 }
 
-@supports (font-variation-settings: normal) {
-    html {
-        font-family: 'Inter var', sans-serif;
-    }
-}
 p {
     word-break: break-word;
 }
@@ -28,20 +26,20 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    background: #f8f9fa;
     overflow-x: hidden;
+    font-size: 1.3rem;
 }
 
 html, body {
     width: 100%;
-    background: #fff;
     scroll-behavior: smooth;
+    background: var(--body-bg);
 }
 
 header {
     position: sticky;
     width: 100%;
-    height: 90px;
+    height: 80px;
     display: flex;
     background: #ffffffc2;
     top: 0;
@@ -64,8 +62,8 @@ header {
 header nav a {
     color: var(--primary-text-color);
     text-decoration: none;
-    font-weight: 500;
-    transition: 200ms
+    transition: 200ms;
+    font-size: 16px;
 }
 
 nav .toggle {
@@ -82,12 +80,12 @@ header nav a:hover {
 }
 
 .header-content .logo svg {
-    width: 150px;
-    height: 45px;
+    width: 110px;
+    height: 40px;
 }
 
 .header-content .toggle svg {
-    width: 30px;
+    width: 25px;
     height: 60px;
 }
 
@@ -95,87 +93,84 @@ header nav a:hover {
 main {
     width: 100%;
     color: var(--primary-color);
-    font-weight: 900;
     font-size: 3em;
 }
 
 .main-heading {
     display: flex;
     justify-content: space-between;
-    padding-top: 180px;
+    padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.main-heading .descreption {
+    display: flex;
+    flex-flow: column;
+    padding-top: 50px;
 }
 
 .main-heading p {
     margin: 0;
 }
 
-.main-heading .image-bg {
-    border-radius: 250px;
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-}
-
 .main-heading #porfolio-image {
     position: relative;
     flex: 1;
-    justify-content: end;
     align-items: center;
-    width: 100%;
     display: flex;
-    padding-inline-end: 50px;
+    margin-bottom: 40px;
 }
 
 .main-heading #porfolio-image svg {
     position: absolute;
-    right: -5px;
-    width: 430px;
+    left: -5px;
+    width: 170px;
 }
 
 .main-heading #porfolio-image img {
     position: relative;
     border-radius: 250px;
-    width: 330px;
+    width: 150px;
 }
 
 .descreption .me {
+    z-index: 1;
     margin: 0;
-    font-size: 4.5rem;
-    width: 600px;
-    background: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 800;
+    width: 100%;
+    background: var(--primary-text-color);
+    background-image: url("https://images.unsplash.com/photo-1585758874546-c593da5f29e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.descreption .breif {
+.descreption .brief {
     margin: 0;
     margin-top: 20px;
     color: var(--primary-text-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 600px;
 }
 
 .btn {
-    background: linear-gradient(180deg, var(--primary-color), #6288eb);
+    background: var(--primary-color);
     color: #fff;
     border: 0;
-    height: 65px;
-    width: 200px;
+    height: 60px;
+    width: 180px;
     font-size: 1rem;
-    font-weight: 600;
     padding: 10px;
     cursor: pointer;
 }
 
-.rounded-smooth {
+.btn-smooth-corners {
     border-radius: 15px;
 }
 
 @supports (-webkit-mask-image: paint(smooth-corners)){
-    .rounded-smooth {
+    .btn-smooth-corners {
         border-radius: 15px;
         --smooth-corners: 16.4, 2.2;
         mask-image: paint(smooth-corners);
@@ -184,30 +179,39 @@ main {
 }
 
 
+.card-smooth-corners {
+    border-radius: 25px;
+}
+
+@supports (-webkit-mask-image: paint(smooth-corners)){
+    .card-smooth-corners {
+        border-radius: 25px;
+        --smooth-corners: 26.4, 12.2;
+        mask-image: paint(smooth-corners);
+        -webkit-mask-image: paint(smooth-corners);
+    }
+}
+
 section {
+    padding: 30px 0;
     overflow: hidden;
+    height: 500px;
+    font-family: Inter, sans-serif;
 }
 
 section.stroked-text {
     position: relative;
-    height: 500px;
 }
 
 section.stroked-text:before {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    font-size: 2.5em;
+    font-size: 2em;
+    font-weight: bold;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px var(--primary-color);
 }
 
 #bio {
     padding-bottom: 100px;
-}
-
-#education {
-    background: var(--primary-bg);
 }
 
 #education:before {
@@ -222,9 +226,105 @@ section.stroked-text:before {
     content: "Skills";
 }
 
+
+/* START PROJECTS SECTION */
+
+#bio, #projects {
+    height: max-content !important;
+}
+
 #projects:before {
     content: "Projects";
 }
+
+#projects .project-cards {
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+}
+
+#projects .project-card {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    z-index: 1;
+    max-width: 900px;
+    box-shadow: 0 0 30px 0 #f2f2f2;
+    background: var(--primary-bg);
+    border-radius: 10px;
+    padding: 26px;
+    color: var(--primary-text-color);
+    font-size: 20px;
+    gap: 10px;
+}
+
+#projects .project-card .project-body {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+
+#projects .project-card .title {
+    text-decoration: none;
+    color: var(--primary-color) !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#projects .project-card .title:hover {
+    text-decoration: #4ababb;
+}
+
+#projects .project-card .description {
+    color: var(--secondary-text-color);
+    font-size: 16px;
+}
+
+#projects .project-card .technologies {
+    color: var(--primary-text-color) !important;
+    font-weight: 700;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+#projects .project-card .tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#projects .project-card .tags .tag {
+    font-size: 15px;
+    color: #fff;
+    background: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 40px;
+    font-weight: 400;
+}
+
+#projects .project-card img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#projects .project-card .project-descreption {
+
+}
+
+#projects .project-card .project-descreption .title {
+    font-size: 26px;
+    color: var(--primary-text-color);
+}
+
+#projects .project-card .project-descreption .descreption {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--secondary-text-color);
+}
+
+/* END PROJECTS SECTION */
 
 #contact:before {
     content: "Contact";
@@ -236,7 +336,7 @@ footer {
 }
 ::-webkit-scrollbar {
     width: 10px;
-    background: #e6eaf5;
+    background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
