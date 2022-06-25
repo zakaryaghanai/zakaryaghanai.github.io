@@ -21,26 +21,34 @@
         display: block;
     }
 
-    .main-heading {
-        padding-top: 80px;
+    #introduction {
+        padding: 0 0 50px 0;
     }
 
-    .descreption {
-        padding-top: 0 !important;
-        width: 90%;
-    }
+    #introduction .description {
+        font-size: 32px;
 
-    .descreption .me {
-        margin: 0;
-        font-size: 2.3rem;
-    }
-
-    .descreption .brief {
+        margin: 70px 0;
         width: 100%;
     }
 
+    #selected-work .container .selected-work-title {
+        font-size: 26px;
+    }
+    .selected-work-card .description a .title {
+        font-size: 22px;
+    }
+
+    .selected-work-card .description p {
+        font-size: 16px;
+    }
+
+    .selected-works-cards {
+        grid-template-columns: 1fr;
+    }
+
     .btn {
-        width: 180px;
+
         font-size: 0.9rem;
         padding: 10px;
         cursor: pointer;
@@ -65,15 +73,29 @@
         display: block;
     }
 
-    section.stroked-text:before {
-        font-size: 2em;
+    #introduction .description {
+        font-size: 38px;
+        margin: 70px 0;
+        width: 100%;
+    }
+
+     #selected-work .container .selected-work-title {
+        font-size: 28px;
+    }
+
+    .selected-work-card .description a .title {
+        font-size: 24px;
+    }
+
+    .selected-work-card .description p {
+        font-size: 18px;
     }
 }
 
 /* MD */
 @media (min-width: 768px) and (max-width: 1023px) {
     .container {
-        width: 80%;
+        width: 90%;
     }
 
     nav ul {
@@ -84,31 +106,51 @@
         display: block;
     }
 
+    #introduction .description {
+        font-size: 44px;
+        width: 100%;
+    }
+
+
+    #selected-work .container .selected-work-title {
+        font-size: 28px;
+    }
+
+    .selected-work-card .description a .title {
+        font-size: 24px;
+    }
+
+    .selected-work-card .description p {
+        font-size: 18px;
+    }
+
 }
 
 /* LG */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .container {
-        width: 60%;
+        width: 95%;
     }
+
+    .main-heading {
+        padding-top: 80px;
+    }
+
 
 }
 
 /* XL */
-@media (min-width: 1280px) and (max-width: 1535px) {
+@media (min-width: 1280px) {
     .container {
-        width: 60%;
+        width: 80%;
     }
-}
 
-/* 2XL */
-@media (min-width: 1536px) {
-    .container {
-        width: 60%;
+    .main-heading {
+        padding-top: 80px;
     }
+
+    
 }
-
-
 
 
 
