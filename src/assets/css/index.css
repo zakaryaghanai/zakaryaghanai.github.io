@@ -112,12 +112,12 @@ header nav a:hover {
     color: var(--primary-color);
 }
 
-.header-content .logo svg {
+.header-content .logo img {
     width: 170px;
     height: 40px;
 }
 
-.header-content .toggle svg {
+.header-content .toggle img {
     width: 25px;
     height: 60px;
 }
