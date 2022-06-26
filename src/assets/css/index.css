@@ -181,10 +181,14 @@ main {
     background: var(--primary-color);
     color: #fff;
     border: 0;
-    height: 50px;
-    width: 130px;
-    font-size: 1rem;
+    height: 60px;
+    width: 200px;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    gap: 5px;
     cursor: pointer;
 }
 
