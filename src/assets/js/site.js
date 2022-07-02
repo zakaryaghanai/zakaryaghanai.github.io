@@ -1,40 +1,24 @@
 $(document).ready(function () {
-    if (CSS && 'paintWorklet' in CSS) {
-        CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners')
+    if (CSS && "paintWorklet" in CSS) {
+        CSS.paintWorklet.addModule("https://unpkg.com/smooth-corners");
     }
 
-    $(window).scroll( function () {
-        var current = "";
+    $(window).scroll(function () {
+        const scrollTop = $(window).scrollTop();
 
-        $('section').each(function (){
-            const sectionTop = $(this).offset().top;
-            const sectionHeight = $(this).height();
+        $(".lazy-load").each(function () {
+            const elementTop = $(this).offset().top;
 
-
-            if ( $(window).scrollTop() >= sectionTop - (sectionHeight /2) ) {
-                current = $(this).attr("id")
+            if (scrollTop >= elementTop - window.innerHeight * 0.9) {
+                $(this).addClass("active");
             }
         });
-
-        // $('nav ul a').each(function () {
-        //     $(this).removeClass("active")
-        //     if ($(this).attr('href') == '#' + current) {
-        //         $(this).addClass('active')
-        //     }
-        // });
     });
 
-    $('.logo a').click(function() {       
-        $('nav ul a').each(function () {
+    $(window).scroll();
 
-            $(this).removeClass("active");
-        });
-    })
-    
-    $(window).scroll()
-
-    $('#viewResume').click(function() {
-        let resumeUrl = $('[data-resume-url]').attr('data-resume-url');
-       window.open(resumeUrl, '_blank');
-    })
-})
+    $("#viewResume").click(function () {
+        let resumeUrl = $("[data-resume-url]").attr("data-resume-url");
+        window.open(resumeUrl, "_blank");
+    });
+});

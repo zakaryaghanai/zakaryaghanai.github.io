@@ -27,11 +27,15 @@
 
     #introduction .description {
         font-size: 32px;
-
         margin: 70px 0;
         width: 100%;
     }
 
+    .btn {
+        height: 50px;
+        width: 160px;
+        font-size: 14px !important;
+    }
     #selected-work .container .selected-work-title {
         font-size: 26px;
     }

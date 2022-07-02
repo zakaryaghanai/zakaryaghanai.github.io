@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --primary-text-color: #3A395E;
+    --primary-text-color: #1f1d5c;
     --secondary-text-color: #6E6D8F;
     --primary-color: #775fd3;
     --primary-bg: #fff;
@@ -132,10 +132,10 @@ main {
 }
 #introduction .description {
     color: var(--primary-text-color);
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 900;
     margin: 70px 0;
-    width: 800px;
+    width: 850px;
 }
 
 #selected-work .container .selected-work-title {
@@ -182,7 +182,7 @@ main {
     color: #fff;
     border: 0;
     height: 60px;
-    width: 200px;
+    width: 180px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -197,7 +197,7 @@ main {
 }
 
 #viewResume {
-    font-size: 18px;;
+    font-size: 16px;
 }
 @supports (-webkit-mask-image: paint(smooth-corners)){
     .btn-smooth-corners {
@@ -250,6 +250,32 @@ footer .madeWith{
     font-size: 16px;
 
 }
+
+
+.lazy-load {
+    visibility: hidden !important;
+   opacity: 0 !important;
+}
+
+.lazy-load.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: lazy-load .4s linear;
+}
+
+@-webkit-keyframes lazy-load {
+    0% {
+        opacity: 0;
+        -webkit-transform:translate3d(0, 60px, 0);
+        transform:translate3d(0, 60px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     background: #f5f5f5;
