@@ -94,6 +94,7 @@
     .selected-work-card .description p {
         font-size: 18px;
     }
+    
 }
 
 /* MD */
@@ -146,13 +147,8 @@
 /* XL */
 @media (min-width: 1280px) {
     .container {
-        width: 80%;
+        width: 65%;
     }
-
-    .main-heading {
-        padding-top: 80px;
-    }
-
     
 }
 
